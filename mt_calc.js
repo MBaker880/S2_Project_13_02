@@ -5,8 +5,8 @@
    Tutorial 11
    Case Problem 2
 
-   Author: 
-   Date:   
+   Author: Mackenzie Baker
+   Date:   3.26.2019
    
    Filename: mt_calc.js
 	
@@ -32,7 +32,25 @@
       Returns the previous expression from the list of expressions in the textStr parameter
 
 */
+/* ===================================================================== */
 
+// Loading the init function once the page is loaded
+window.onload = init;
+
+// Declaring the init fucntion to bring up the calculator when page is pulled up
+function init() {
+      // Calling hthe calcButtoms class to pull up when init function is run
+      var calcButtons = document.getElementsByClassName("calcButtons");
+      for (var i = 0; i < calcButtons; i++){
+            calcButtons[i].onclick = buttonClick;
+      }
+      document.getElementById("calcWindow").addEventListener("keydown", calcKeys);
+}
+
+// Calling the buttonClick function to change what appears in the calculator 
+function buttonClick(e){
+      var calcValue = document.getElementById("calcWindow");
+}
 
 
 
